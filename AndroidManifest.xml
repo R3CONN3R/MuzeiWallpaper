@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.jamoo.muzei"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <!-- Copy this service and change the package name to yours -->
+        <service
+            android:name="de.jamoo.muzei.WallSource"
+            android:description="@string/source_description"
+            android:icon="@drawable/ic_source"
+            android:label="@string/source_name" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource" />
+            </intent-filter>
+
+            <meta-data
+                android:name="color"
+                android:value="#ffffffff" /> <!-- Here you can change the color of the icon in the source overview -->
+            <meta-data
+                android:name="settingsActivity"
+                android:value="de.jamoo.muzei.SettingsActivity" /> <!-- Change the path -->
+        </service>
+
+        <!-- Copy this activity as well -->
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_settings"
+            android:theme="@style/Theme.Wall.Settings"
+            android:exported="true">
+        </activity>
+        
+    </application>
+</manifest>

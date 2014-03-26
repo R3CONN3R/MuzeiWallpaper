@@ -1,0 +1,24 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">My Icon Pack</string>
+
+    <!-- URL for JSON -->
+    <string name="config_wallpaper_manifest_url">http://pastebin.com/raw.php?i=FmhMm54G</string>
+
+    <!-- OF Menu Custom Command -->
+    <string name="action_share_app">Share Wallpaper</string>
+
+    <!-- Muzei Choose source screen -->
+    <string name="source_name">My Icon Pack Wallpapers</string>
+
+    <!-- Make sure you also change source name in WallSource.java! -->
+    <string name="source_description">Beautiful wallpapers from My Icon Pack</string>
+
+    <!-- Settings Activity -->
+    <string name="title_settings">Settings</string>
+    <string name="config_every">Refresh every %1$s.</string>
+    <string name="config_connection_wifi">Only on WIFI</string>
+    <string name="config_connection_all">On all available connections</string>
+    <string name="empty">Oops!\nPlease re-open the settings ;)</string>
+
+</resources>
